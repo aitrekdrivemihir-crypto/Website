@@ -1,0 +1,123 @@
+@font-face{
+    font-family : 'Japanese';
+    src : url('./Fonts/Oriental-Chicken.ttf');
+}
+
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+html,body{
+    width : 100%;
+    height : 100vh;
+}
+
+#main{
+    width : 100%;
+    min-height : 100vh;
+}
+
+.loader{
+    position : absolute;
+    width : 100%;
+    height : 100vh;
+    background-color :  rgb(250, 153, 8);
+    animation : pulse 3.5s linear;
+}
+
+.zoom{
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-50%)rotate(-7deg);
+    font-size : 13vw;
+    font-family : 'Japanese';
+    -webkit-text-stroke-width : 0.25vh;
+    -webkit-text-stroke-color : rgba(255, 255, 254, 0.67);
+    -webkit-text-fill-color : transparent;
+    outline : none;
+
+}
+
+.loader h2{
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-50%)rotate(-7deg);
+    font-size : 5vw;
+    font-family : 'Japanese';
+    color : rgb(255, 255, 254);
+    padding : 1vh;
+}
+
+.Loading{
+    position : relative;
+    left : 50%;
+    width: 50%;
+    bottom : -65%;
+    height : 10px;
+    background-color : rgb(255, 255, 254);
+    transform : translate(-50%,-50%) rotate(-7deg);
+    border-radius : 5px;
+    overflow : hidden;
+    display : inline-block;
+}
+
+.Loading::after{
+    content : '';
+    position : absolute;
+    bottom : 10%;
+    height : 100%;
+    border-radius : 4px;
+    animation : loading 3.5s linear;
+}
+
+@keyframes loading{
+    0%{
+        width : 0;
+        background-color : rgb(46, 210, 210);
+
+    }
+    25%{
+        width : 25%;
+        background-color : rgba(75, 79, 194, 0.949);
+    
+    }
+    50%{
+        width : 50%;
+        background-color : rgb(223, 223, 107);
+    
+    }
+    75%{
+        width : 75%;
+        background-color : rgb(208, 57, 57);
+    }
+    100%{
+        width : 100%;
+        background-color : rgb(79, 204, 96);
+    }
+}
+
+@keyframes pulse{
+    0%{
+        background-color : rgb(46, 210, 210);
+
+    }
+    25%{
+        background-color : rgba(75, 79, 194, 0.949);
+    
+    }
+    50%{
+        background-color : rgb(223, 223, 107);
+    
+    }
+    75%{
+        background-color : rgb(208, 57, 57);
+    }
+    100%{
+        background-color : rgb(79, 204, 96);
+    }
+}
